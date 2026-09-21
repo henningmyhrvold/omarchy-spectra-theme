@@ -1,22 +1,56 @@
-# Spectra Theme
+# Spectra — Quattro
 
----
+A dark charcoal and periwinkle theme with restrained frosted-glass surfaces,
+native to **Omarchy 4.0.4+**. Based on
+[abhijeet-swami's Spectra](https://github.com/abhijeet-swami/omarchy-spectra-theme).
 
-## Quick Install
+## Install
+
+After the migrated version is published:
 
 ```bash
-omarchy-theme-install https://github.com/abhijeet-swami/omarchy-spectra-theme
+omarchy theme install https://github.com/henningmyhrvold/omarchy-spectra-theme
 ```
 
-## Screenshots
+For this three-repo workstation collection, use the local checkout instead:
 
-![Spectra 1](https://github.com/abhijeet-swami/omarchy-spectra-theme/blob/main/screenshots/1.png)
-![Spectra 2](https://github.com/abhijeet-swami/omarchy-spectra-theme/blob/main/screenshots/2.png)
+```bash
+bash ~/src/omarchy-dotfiles/scripts/omarchy-mods-desktop.sh
+```
 
-## LockScreen
+That installer links this checkout as `spectra`, adds the compositor's rounded
+corners and blur through user configuration, and applies the theme. It preserves
+existing files in timestamped backups. Reapply theme edits with:
 
-![Spectra 3](https://github.com/abhijeet-swami/omarchy-spectra-theme/blob/main/screenshots/3.png)
+```bash
+omarchy theme set spectra
+```
 
-## Walker
+## Theme structure
 
-![Spectra 4](https://github.com/abhijeet-swami/omarchy-spectra-theme/blob/main/screenshots/4.png)
+- `colors.toml`: Quattro's named palette, original ANSI colors, selection/cursor
+  colors, and declarative window-border gradients.
+- `shell.toml`: native bar, launcher, menu, notification, popup, OSD (popup
+  tokens), polkit, image-picker, and lock-screen surfaces.
+- `backgrounds/`: the original Spectra wallpapers.
+- App-specific color-only files remain for apps such as btop and Helix.
+
+Omarchy generates terminal, Hyprland, Gum, Neovim and VS Code files from its
+current templates. This also works with `omarchy theme install`, which filters
+Lua and terminal configs out of cloned themes. Old Waybar/Walker/Mako/SwayOSD
+and Hyprlock files were retired; their originals remain in Git history.
+
+## Glass settings
+
+Background alpha is 0.78 for the bar, 0.88 for menus/popups, and 0.90 for
+notifications. Text stays fully opaque. Adjust these in `shell.toml` and reapply.
+Keep `bar.transparent` **false** in `~/.config/omarchy/shell.json`: true makes
+the bar background completely invisible instead of using the theme's alpha.
+
+Blur, shadows, gaps, and 12px rounding are workstation preferences in the
+companion dotfiles' `hypr/looknfeel.lua`. Quattro's shell follows Hyprland's
+rounding automatically. A theme installed alone still has the palette and
+translucent surfaces, but uses the user's existing compositor geometry/blur.
+
+The images in `screenshots/` and `preview.png` are historical Omarchy 3
+references, not screenshots of the migrated Quattro shell.
