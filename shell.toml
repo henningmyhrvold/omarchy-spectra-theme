@@ -5,7 +5,8 @@
 
 [bar]
 background = "#1a1b1e"
-background-alpha = 0.78
+#background-alpha = 0.78
+background-alpha = 0.4
 text = "#eaeaef"
 active = "#7ca5ff"
 size-horizontal = 30
@@ -30,40 +31,43 @@ normal-color = "foreground"
 normal-fill-alpha = 0.04
 normal-border = "#eaeaef"
 normal-border-alpha = 0.14
-normal-border-width = 1
+#normal-border-width = 1
+normal-border-width = 2
 hover-cursor-color = "foreground"
 hover-cursor-fill-alpha = 0.09
 hover-cursor-border = "#b2c3ff"
 hover-cursor-border-alpha = 0.30
-hover-cursor-border-width = 1
+hover-cursor-border-width = 2
 focus-color = "accent"
 focus-fill-alpha = 0.10
 focus-border = "#97b6ff"
 focus-border-alpha = 0.50
-focus-border-width = 1
+focus-border-width = 2
 selected-color = "accent"
 selected-fill-alpha = 0.16
 selected-border = "#97b6ff"
 selected-border-alpha = 0.35
-selected-border-width = 1
+selected-border-width = 2
 pressed-fill-alpha = 0.22
 selection-fill-alpha = 0.30
 
 [popups]
 background = "#1a1b1e"
-background-alpha = 0.88
+background-alpha = 0.4
+#background-alpha = 0.88
 text = "#eaeaef"
 border = "hyprland.active-border-foreground"
 border-alpha = 0.60
-border-width = 1
+border-width = 2
 
 [tooltip]
 background = "#1a1b1e"
-background-alpha = 0.95
+#background-alpha = 0.95
+background-alpha = 0.4
 text = "#eaeaef"
 border = "hyprland.active-border-foreground"
 border-alpha = 0.50
-border-width = 1
+border-width = 2
 
 [notifications]
 background = "#1a1b1e"
@@ -71,16 +75,17 @@ background-alpha = 0.90
 text = "#eaeaef"
 border = "hyprland.active-border-foreground"
 border-alpha = 0.60
-border-width = 1
+border-width = 2
 countdown = "#7ca5ff"
 
 [launcher]
 background = "#1a1b1e"
-background-alpha = 0.88
+#background-alpha = 0.88
+background-alpha = 0.4
 text = "#eaeaef"
 border = "hyprland.active-border-foreground"
 border-alpha = 0.60
-border-width = 1
+border-width = 2
 scrim = "#101114"
 scrim-alpha = 0.18
 selected-background = "#7ca5ff"
@@ -91,7 +96,8 @@ selected-border-alpha = 0.30
 
 [menu]
 background = "#1a1b1e"
-background-alpha = 0.88
+#background-alpha = 0.88
+background-alpha = 0.4
 text = "#eaeaef"
 border = "hyprland.active-border-foreground"
 border-alpha = 0.60
@@ -106,7 +112,8 @@ selected-border-alpha = 0.30
 
 [polkit]
 background = "#1a1b1e"
-background-alpha = 0.94
+background-alpha = 0.4
+#background-alpha = 0.94
 text = "#eaeaef"
 text-error = "#ef5d67"
 border = "hyprland.active-border"
