@@ -30,8 +30,9 @@ omarchy theme set spectra
 
 - `colors.toml`: Quattro's named palette, original ANSI colors, selection/cursor
   colors, and declarative window-border gradients.
-- `shell.toml`: native bar, launcher, menu, notification, popup, OSD (popup
-  tokens), polkit, image-picker, and lock-screen surfaces.
+- `shell.toml`: native bar, menu, notification, popup, tooltip, OSD (popup
+  tokens), polkit, image-picker, and lock-screen surfaces. The `[launcher]`
+  section is not read by this Omarchy version and is harmless there.
 - `backgrounds/`: the original Spectra wallpapers.
 - App-specific color-only files remain for apps such as btop and Helix.
 
@@ -42,15 +43,18 @@ and Hyprlock files were retired; their originals remain in Git history.
 
 ## Glass settings
 
-Background alpha is 0.78 for the bar, 0.88 for menus/popups, and 0.90 for
-notifications. Text stays fully opaque. Adjust these in `shell.toml` and reapply.
+Background alpha is 0.4 for the bar, menu, popups, tooltip, polkit, and the
+(unused) launcher section, 0.90 for notifications, and 0.85 for the lock
+screen. Text stays fully opaque. Adjust these in `shell.toml` and reapply.
 Keep `bar.transparent` **false** in `~/.config/omarchy/shell.json`: true makes
 the bar background completely invisible instead of using the theme's alpha.
 
-Blur, shadows, gaps, and 12px rounding are workstation preferences in the
-companion dotfiles' `hypr/looknfeel.lua`. Quattro's shell follows Hyprland's
-rounding automatically. A theme installed alone still has the palette and
-translucent surfaces, but uses the user's existing compositor geometry/blur.
+Blur, shadows, gaps, and square corners (`rounding = 0`) are workstation
+preferences in the companion dotfiles' `hypr/looknfeel.lua` (`gaps_in`/`gaps_out`
+4, `border_size` 2, blur size 6/passes 3, shadow range 18). Quattro's shell
+follows Hyprland's rounding automatically. A theme installed alone still has
+the palette and translucent surfaces, but uses the user's existing compositor
+geometry/blur.
 
 The images in `screenshots/` and `preview.png` are historical Omarchy 3
 references, not screenshots of the migrated Quattro shell.
