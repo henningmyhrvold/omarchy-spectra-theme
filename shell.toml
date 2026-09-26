@@ -134,7 +134,7 @@ border = "hyprland.active-border-foreground"
 border-active = "#7ca5ff"
 border-error = "#ef5d67"
 border-alpha = 0.80
-border-width = 1
+border-width = 2
 selection = "#7ca5ff"
 selection-alpha = 0.35
 
